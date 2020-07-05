@@ -1,0 +1,12 @@
+## historical data
+# exclude raw data
+1m_data/
+4h_data/
+
+
+# emacs tmp files
+*~
+
+back_test_v0.py
+
+data backup/

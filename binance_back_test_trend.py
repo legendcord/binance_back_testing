@@ -7,11 +7,12 @@ import matplotlib.pyplot as plt
 #pv_enum = ['l6r1', 'l4r2', 'l2r6']
 pv_enum = ['l4r2']
 start_year = 2018
+start_month = 9
 risk_control = False # risk control
 adjust_leverage = False
 P_val = 1/100
 leverage = 3
-max_orders = 10
+max_orders = 3
 
 symbol = 'ETHUSDT'
 data_1m = pd.read_csv('1m_data/' + symbol +'/ETHUSDT.csv')
@@ -321,8 +322,9 @@ for i in range(rows):
         
     last_low = data_1m['Low'][i]
     last_high = data_1m['High'][i]
-    current_close = data_1m['Close'][i]
-    if dt_obj.year < start_year:
+    current_close = data_1m['Close'][i]    
+    start_date = datetime(start_year,start_month,1)
+    if dt_obj < start_date:
         continue
     if base_price is None:
         base_price = data_1m['Close'][i]

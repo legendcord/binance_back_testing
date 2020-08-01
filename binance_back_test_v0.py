@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 # load data from file
 #data_1m = pd.read_csv('1m_data/ETHUSDT/ETHUSDT2020.csv')
 #data_4h = pd.read_csv('4h_data/ETHUSDT/ETHUSDT2020.csv')
-data_1m = pd.read_csv('1m_data/ETHUSDT/ETHUSDT.csv')
-data_4h = pd.read_csv('4h_data/ETHUSDT/ETHUSDT.csv')
+#data_1m = pd.read_csv('1m_data/ETHUSDT/ETHUSDT.csv')
+#data_4h = pd.read_csv('4h_data/ETHUSDT/ETHUSDT.csv')
 
 #data_1m = pd.read_csv('1m_data/BTCUSDT/BTCUSDT2020.csv')
 #data_4h = pd.read_csv('4h_data/BTCUSDT/BTCUSDT2020.csv')
-#data_1m = pd.read_csv('1m_data/BTCUSDT/BTCUSDT.csv')
-#data_4h = pd.read_csv('4h_data/BTCUSDT/BTCUSDT.csv')
+data_1m = pd.read_csv('1m_data/BTCUSDT/BTCUSDT.csv')
+data_4h = pd.read_csv('4h_data/BTCUSDT/BTCUSDT.csv')
 
 data_1m = data_1m.drop_duplicates()
 # 4hour data contains duplicated rows
@@ -25,17 +25,15 @@ data_4h = data_4h.drop_duplicates()
 #pv_enum = ['l6r1', 'l4r2', 'l2r6', 'l4r6', 'l4r4', 'l4r3']
 #pv_enum = ['l3r6','l4r6']
 
-pv_enum = ['l6r1', 'l4r2', 'l2r6']
-#pv_enum = ['l2r6']
-
-#pv_enum = ['l4r2']
+#pv_enum = ['l6r1', 'l4r2', 'l2r6']
+pv_enum = ['l3r6', 'l4r2']
 
 start_year = 2017
 
 risk_control = True
-adjust_leverage = False
+adjust_leverage = True
 P_val = 1/100
-leverage = 3
+leverage = 2
 
 current_pivot_high = None
 current_pivot_low = None
